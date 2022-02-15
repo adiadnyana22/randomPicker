@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+main {
+    min-height: 100vh;
+    /* background-image: url('https://binus.ac.id/wp-content/uploads/2019/08/WhatsApp-Image-2020-09-24-at-3.47.58-PM-1.jpeg');
+    filter: blur(8px);
+    -webkit-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.prize {
+    /* padding: 2rem; */
+    width: 80%;
+    min-height: 80vh;
+    border-radius: 24px;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+    background-color: #0098D7;
+    display: flex;
+    position: relative;
+}
+
+.title {
+    width: 500px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title h2 {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 2em;
+}
+
+.title h2 span {
+    color: #F48B31;
+    font-weight: 500;
+}
+
+.images img {
+    width: 100%;
+}
+
+.settingBtn {
+    text-align: center;
+}
+
+.settingBtn button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.settingBtn button span {
+    display: block;
+    margin-top: -.5rem;
+}
+
+.detail {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0 24px 24px 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pemenang {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    width: 95%;
+    margin: auto;
+}
+
+.pemenang span {
+    display: block;
+    font-size: 1.5em;
+    background-color: #0098D7;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    color: #fff;
+    border-radius: 24px;
+}
+
+.tombol {
+    display: flex;
+    justify-content: center;
+}
+
+.tombol button {
+    background-color: #F48B31;
+    color: #fff;
+    border: 0;
+    padding: .5rem 3rem;
+    font-size: 1.25em;
+    display: block;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.setting {
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    background-color: #0077aa;
+    border-radius: 24px;
+    transition: .5s;
+}
+
+.setting section {
+    padding: 2rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+    height: 100%;
+}
+
+.setting label {
+    display: block;
+    padding: .5rem 0;
+}
+
+.setting div:first-child{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.setting textarea {
+    width: 100%;
+    height: 100%;
+    margin-top: .25rem;
+    padding: 1rem;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.setting input {
+    padding: .5rem 1rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1em;
+}
+
+.setting button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: .5rem 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #F48B31;
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+}
+
