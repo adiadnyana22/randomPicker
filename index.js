@@ -67,7 +67,13 @@ document.querySelector('#stop').addEventListener('click', () => {
         pemenang.innerHTML = data;
 
         let entitasBaru = "";
-        for(let i = 0; i < isiData.length; i++) entitasBaru += `${isiData[i]}\n`;
+        for(let i = 0; i < isiData.length; i++) {
+            if(i == isiData.length - 1){
+                entitasBaru += `${isiData[i]}`;
+            } else {
+                entitasBaru += `${isiData[i]}\n`;
+            }
+        }
         inputEntitas.value = entitasBaru;
     }
 })
