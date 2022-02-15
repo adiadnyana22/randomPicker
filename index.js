@@ -14,7 +14,7 @@ let jumlahUndian = 1;
 const pemenang = document.querySelector('#pemenang');
 
 inputEntitas.addEventListener('change', () => {
-    isiData = inputEntitas.value.split('\n');
+    isiData = inputEntitas.value.trim().split('\n');
     updateDisplay();
 })
 
