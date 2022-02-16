@@ -51,10 +51,12 @@ document.querySelector('#start').addEventListener('click', () => {
 document.querySelector('#stop').addEventListener('click', () => {
     if(interval){
         let data = "";
+        let pemenang = [];
         for(let i = 0; i < jumlahUndian; i++){
             if(isiData.length){
                 const randomNum = Math.floor(Math.random() * isiData.length);
                 data += `<span>${isiData[randomNum]}</span>`;
+                pemenang.push({ pemenang: isiData[randomNum], hadiah: inputHadiah.value });
                 isiData = isiData.filter((val, index) => {
                     return index != randomNum;
                 });
@@ -75,5 +77,17 @@ document.querySelector('#stop').addEventListener('click', () => {
             }
         }
         inputEntitas.value = entitasBaru;
+
+        fetch("https://api.apispreadsheets.com/data/jTP0jpN0vNsMfUaw/", {
+            method: "POST",
+            body: JSON.stringify({"data": pemenang}),
+        }).then(res =>{
+            if (res.status === 201){
+                // SUCCESS
+            }
+            else{
+                // ERROR
+            }
+        })
     }
 })

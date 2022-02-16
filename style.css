@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    
-}
-
 main {
     min-height: 100vh;
     /* background-image: url('https://binus.ac.id/wp-content/uploads/2019/08/WhatsApp-Image-2020-09-24-at-3.47.58-PM-1.jpeg');
@@ -91,13 +87,12 @@ main {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    width: 95%;
     margin: auto;
 }
 
 .pemenang span {
     display: block;
-    font-size: 1.5em;
+    font-size: 1em;
     background-color: #0098D7;
     padding: .5rem 1rem;
     margin: .5rem;
@@ -161,7 +156,7 @@ main {
     flex-grow: 1;
 }
 
-.setting input {
+.setting input, .setting select {
     padding: .5rem 1rem;
     display: block;
     width: 100%;
