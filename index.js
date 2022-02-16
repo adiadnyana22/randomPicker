@@ -90,9 +90,9 @@ document.querySelector('#stop').addEventListener('click', () => {
                 // ERROR
             }
         })
-        
+
         setTimeout(() => {
             pemenang.innerHTML = data;
-        }, 200)
+        }, 1000)
     }
 })
