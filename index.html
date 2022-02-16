@@ -68,7 +68,6 @@
             // SUCCESS
             res.json().then(data=>{
                 const dataHadiah = data.data;
-                console.log(dataHadiah);
                 for (const hadiah of dataHadiah) {
                     const node = document.createElement('option');
                     node.text = hadiah.hadiah;

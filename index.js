@@ -53,12 +53,12 @@ document.querySelector('#start').addEventListener('click', () => {
 document.querySelector('#stop').addEventListener('click', () => {
     if(interval){
         let data = "";
-        let pemenang = [];
+        let menang = [];
         for(let i = 0; i < jumlahUndian; i++){
             if(isiData.length){
                 const randomNum = Math.floor(Math.random() * isiData.length);
                 data += `<span>${isiData[randomNum]}</span>`;
-                pemenang.push({ pemenang: isiData[randomNum], hadiah: inputHadiah.value });
+                menang.push({ pemenang: isiData[randomNum], hadiah: inputHadiah.value });
                 isiData = isiData.filter((val, index) => {
                     return index != randomNum;
                 });
@@ -68,6 +68,7 @@ document.querySelector('#stop').addEventListener('click', () => {
         }
         clearInterval(interval);
         interval = null;
+        pemenang.innerHTML = data;
 
         let entitasBaru = "";
         for(let i = 0; i < isiData.length; i++) {
@@ -81,7 +82,7 @@ document.querySelector('#stop').addEventListener('click', () => {
 
         fetch("https://api.apispreadsheets.com/data/jTP0jpN0vNsMfUaw/", {
             method: "POST",
-            body: JSON.stringify({"data": pemenang}),
+            body: JSON.stringify({"data": menang}),
         }).then(res =>{
             if (res.status === 201){
                 // SUCCESS
@@ -90,9 +91,5 @@ document.querySelector('#stop').addEventListener('click', () => {
                 // ERROR
             }
         })
-
-        setTimeout(() => {
-            pemenang.innerHTML = data;
-        }, 1000)
     }
 })
