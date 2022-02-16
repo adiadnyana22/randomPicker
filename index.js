@@ -41,8 +41,10 @@ document.querySelector('#start').addEventListener('click', () => {
     if(!interval && isiData.length){
         interval = setInterval(() => {
             let data = "";
-            const randomNum = Math.floor(Math.random() * isiData.length);
-            for(let i = 0; i < jumlahUndian; i++) data += `<span>${isiData[randomNum]}</span>`;
+            for(let i = 0; i < jumlahUndian; i++){
+                const randomNum = Math.floor(Math.random() * isiData.length);
+                data += `<span>${isiData[randomNum]}</span>`;
+            }
             pemenang.innerHTML = data;
         }, 100);
     }
@@ -66,7 +68,6 @@ document.querySelector('#stop').addEventListener('click', () => {
         }
         clearInterval(interval);
         interval = null;
-        pemenang.innerHTML = data;
 
         let entitasBaru = "";
         for(let i = 0; i < isiData.length; i++) {
@@ -89,5 +90,6 @@ document.querySelector('#stop').addEventListener('click', () => {
                 // ERROR
             }
         })
+        pemenang.innerHTML = data;
     }
 })
